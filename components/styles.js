@@ -184,21 +184,46 @@ export const PageText = styled.Text`
 `;
 
 export const PageDetails = styled.TouchableOpacity`
-      width: 30%;
-      height: 5%;
+      height: 15%;
+      width: 20%;
       align-items: center;
       background-color: ${brand};
       border-radius: 20%;
       justify-content: center;
+      text-align: center;
 `;
 export const PageDetailsText = styled.Text`
       color: ${secondary};
       font-size: 15px;
       font-weight: bold;
+      padding: 5px 10px;
+      text-align: center;
 `;
 export const PageScreen = styled.View`
       align-items: center;
       width: 100%;
       height: 100%;
       justify-content: center;
+      padding-bottom: 50px;
+`;
+
+export const PostContainer = styled.View`
+      padding: 50px;
+      height: 300px;
+`;
+
+export const PostDetails = styled.TouchableOpacity`
+
+`;
+
+export const PostDetailsText = styled.Text`
+      color: ${brand};
+`;
+
+export const VideoOptions = styled.View`
+      flex-direction: row;
+      height: 100%;
+      width: 100%;
+      margin-top: 10px;
+      justify-content: space-evenly;
 `;

@@ -1,22 +1,23 @@
-import { Text, View } from "react-native";
 import { PageText, PageDetails, PageDetailsText, PageScreen } from "../components/styles";
 import { useNavigation } from "@react-navigation/native";
-import BottomTab2 from "../components/BottomTab2";
+import Video from "../components/Video";
+import VideoList from "../components/VideoList";
+import { ScrollView } from "react-native";
 
 const Page1 = () => {
 
     const navigation = useNavigation();
 
     return (
+        <ScrollView>
         <PageScreen>
-            <PageText>Page 1</PageText>
-            <PageDetails onPress={() => navigation.navigate("Details")}>
-                <PageDetailsText>Details</PageDetailsText>
-            </PageDetails> 
-            {/* <View style={{width:380, bottom:-240}}>
-            <BottomTab2/> 
-            </View>  */}
+            
+            {VideoList.map((e)=>{
+       return (
+       <Video title={e.title} videoId={e.videoId}/>
+     );})}
         </PageScreen>
+        </ScrollView>
     )
 }
 
