@@ -9,6 +9,7 @@ function BottomTab2() {
   return (
     <>
     <XBar
+
         slots={[
             {
             style : {

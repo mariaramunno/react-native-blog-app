@@ -184,13 +184,19 @@ export const PageText = styled.Text`
 `;
 
 export const PageDetails = styled.TouchableOpacity`
-      height: 15%;
+      height: 100%;
       width: 20%;
       align-items: center;
       background-color: ${brand};
-      border-radius: 20%;
+      border-radius: 50%;
       justify-content: center;
       text-align: center;
+
+      ${(props) =>
+        props.playButton &&
+        `
+        width: 14%;
+      `}
 `;
 export const PageDetailsText = styled.Text`
       color: ${secondary};
@@ -208,22 +214,30 @@ export const PageScreen = styled.View`
 `;
 
 export const PostContainer = styled.View`
-      padding: 50px;
-      height: 300px;
-`;
-
-export const PostDetails = styled.TouchableOpacity`
-
+      padding: 0px 30px;
+      height: auto;
+      align-items: center;
+      border: solid 2px ${secondary};
+      justify-content: center;
+      flex: 1;
 `;
 
 export const PostDetailsText = styled.Text`
-      color: ${brand};
 `;
 
 export const VideoOptions = styled.View`
       flex-direction: row;
-      height: 100%;
+      height: 15%;
       width: 100%;
-      margin-top: 10px;
+      margin: 5%;
       justify-content: space-evenly;
+
+`;
+
+export const VideoTitle = styled.Text`
+      font-size: 18px;
+      font-family: 'Roboto';
+      font-weight: bold;
+      text-align: center;
+      margin-top: 5%;
 `;
